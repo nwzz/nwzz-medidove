@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,6 +8,7 @@ import { faFacebookF, faGithub, faGoogle } from '@fortawesome/free-brands-svg-ic
 import { Link } from 'react-router-dom';
 //import useFirebase from '../../hooks/useFirebase';
 import useAuth from '../../hooks/useAuth';
+import { getAuth, signInWithEmailAndPassword } from '@firebase/auth';
 //import { useForm } from 'react-hook-form';
 
     
@@ -15,18 +16,51 @@ import useAuth from '../../hooks/useAuth';
 const Login = () => {
     
     
+    const [user, setUser] = useState([]);
 
     const {signInUsingGoogle } = useAuth();
-    const location = useLocation();
-    const history = useHistory();
+    //const location = useLocation();
+    //const history = useHistory();
 
-    const handleBlur = () =>{
+    const handleBlur = (e) =>{
         console.log('clicked');
+        let isFieldValid = true;
+    if (e.target.name === 'email') {
+      isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
+    }
+    if (e.target.name === 'password') {
+      const isPasswordValid = e.target.value.length > 6;
+      const passwordHasNumber = /\d{1}/.test(e.target.value);
+      isFieldValid = isPasswordValid && passwordHasNumber;
+    }
+    if (isFieldValid) {
+      const newUserInfo = { ...user};
+     // console.log(newUserInfo);
+      newUserInfo[e.target.name] = e.target.value;
+      setUser(newUserInfo);
+
+    }
     }
     
 
-    const handleSubmit = () =>{
+    const handleSubmit = (e) =>{
         console.log('submit clicked');
+        const auth = getAuth();
+        const email = user.email;
+        const password = user.password;
+    signInWithEmailAndPassword(auth, email, password)
+      .then((res) => {
+        const newUserInfo = { ...user, isSignedIn: true };
+        //console.log(newUserInfo);
+        setUser(newUserInfo);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        console.log(errorCode);
+      });      
+      e.preventDefault(); 
     }
     
     // console.log(location.state?.from);
@@ -35,9 +69,8 @@ const Login = () => {
     
 
     const handleGoogleSignIn= () =>{
-
-        signInUsingGoogle();
         
+        signInUsingGoogle();
     }
 
     return (

@@ -1,10 +1,12 @@
 import React from 'react';
 import {Container, Nav, Navbar } from 'react-bootstrap';
 import logo from '../../images/logo.png';
-
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+
 
 const Header = () => {
+    const {user, logOut} = useAuth();
     return (
         <div className="">
             <Navbar bg="light" sticky="top" collapseOnSelect expand="lg" >
@@ -21,7 +23,16 @@ const Header = () => {
                         <Nav.Link href="#pricing">About Us</Nav.Link>
                         <Link to="/register">Register</Link>
                     </Nav>
+                    {
+                    user.email ?
+                    <span><button onClick={logOut} className="btn btn-info">Logout</button><span 
+                    style={{ marginLeft:'10px'}}>{user.displayName}</span>
+                    </ span>
+                    :
                     <Link to="/login"><button className="btn btn-danger">Login</button></Link>
+                }
+
+                    
                 </Container>
             </Navbar>
         </div>

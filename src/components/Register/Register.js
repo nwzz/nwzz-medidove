@@ -1,14 +1,73 @@
-import React from 'react';
+import { createUserWithEmailAndPassword, getAuth } from '@firebase/auth';
+import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
-    const handleSubmit = () => {
-        console.log('submit clicked');
+    const [newUser, setNewUser] = useState([]);
+
+
+
+
+
+    const handleSubmit = (e) => {
+        const auth = getAuth();
+    const email = newUser.email;
+    const password = newUser.password;
+
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((res) => {
+        const newUserInfo = {...newUser, isSignedUp: true};
+        newUserInfo.error = '';
+        newUserInfo.success = true;
+        setNewUser(newUserInfo);
+        // alert('Welcome!! You Successfully Signed Up ');
+        // history.push('/login');
+        //updateUserName(newUser.name);
+        //console.log(res.newUser);
+    })
+    .catch( error => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(`Sorry, ${errorCode} Try again`);
+        console.log(errorCode);
+        console.log(errorMessage);
+    })
+    e.preventDefault();
     }
 
-    const handleBlur = () => {
-        console.log('clicked blur');
+
+
+
+
+    const handleBlur = (e) => {
+        let isFieldValid = true;
+    if(e.target.name === 'email'){
+      isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
+    }
+    if(e.target.name === 'password'){
+      const isPasswordValid = e.target.value.length > 6;
+      const passwordHasNumber =  /\d{1}/.test(e.target.value);
+      isFieldValid = isPasswordValid && passwordHasNumber;
+    }
+
+    if(e.target.name === 'name'){
+        isFieldValid = true;
+    }
+
+    if(e.target.name === 'phone'){
+        const isPhnValid = e.target.value.length > 6;
+        const phoneHasNumber =  /\d{1}/.test(e.target.value);
+        isFieldValid = isPhnValid && phoneHasNumber;
+
+    }
+    if(isFieldValid){
+      const newUserInfo = {...newUser};
+      newUserInfo[e.target.name] = e.target.value;
+      setNewUser(newUserInfo);
+      console.log(newUserInfo);
+      console.log(newUser);
+    }
     }
     return (
         <div className="d-grid justify-content-center mt-5 ">
