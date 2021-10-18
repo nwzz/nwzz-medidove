@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "COMPLETE DIAGNOSTIC",
+        "price": "300",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/mtN69Cb/service-6.jpg"
+    },
+    {
+        "id": 2,
+        "name": "BLOOD CANCER",
+        "price": "100",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/sm8nrmk/service-5.jpg"
+    },
+    {
+        "id": 3,
+        "name": "NEUOROLOGY SERGARY",
+        "price": "150",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/18Ppz2C/service-4.jpg"
+    },
+    {
+        "id": 4,
+        "name": "ALLERGIC ISSUE",
+        "price": "180",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/nDWGprz/service-3.jpg"
+    },
+    {
+        "id": 5,
+        "name": "DENTAL CARE",
+        "price": "100",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/rmWjN8h/service-2.jpg"
+    },
+    {
+        "id": 6,
+        "name": "BODY SURGERY",
+        "price": "300",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "img": "https://i.ibb.co/z5Jyp8B/service-1.jpg"
+    }
+]
