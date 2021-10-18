@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import logo from '../../images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faCopyright } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faGithub, faGoogle, faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="container-fluid bg-dark footer position-absolute mb-0" fixed="bottom">
             <div className="footer-decor row">
                 <div className="col-md-3 d-grid">
-                    <h2 style={{color:'yellow'}}>Nwz Edu Care</h2><br /><br />
+                    <div><img src={logo} alt="" /></div><br /><br />
                     <div className="d-flex justify-content-center gap-3">
                         
                     <FontAwesomeIcon icon={faInstagram} size='2x' />
