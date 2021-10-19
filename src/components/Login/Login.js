@@ -19,8 +19,8 @@ const Login = () => {
     const [user, setUser] = useState([]);
 
     const {signInUsingGoogle } = useAuth();
-    //const location = useLocation();
-    //const history = useHistory();
+    const location = useLocation();
+    const history = useHistory();
 
     const handleBlur = (e) =>{
         console.log('clicked');
@@ -53,6 +53,7 @@ const Login = () => {
         const newUserInfo = { ...user, isSignedIn: true };
         //console.log(newUserInfo);
         setUser(newUserInfo);
+        history.push(redirect_uri);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -64,13 +65,17 @@ const Login = () => {
     }
     
     // console.log(location.state?.from);
-    // const redirect_uri = location.state?.from || '/';
+    const redirect_uri = location.state?.from || '/';
 
     
 
     const handleGoogleSignIn= () =>{
         
-        signInUsingGoogle();
+        signInUsingGoogle()
+        .then((result) => {
+            setUser(result.user);
+            history.push(redirect_uri);
+        })
     }
 
     return (
@@ -103,7 +108,7 @@ const Login = () => {
                     <br /> <br /> 
                     <Form.Group className="justify-content-start d-flex gap-3" >
 
-                        <input className="submit-btn btn btn-spcl" style={{color:'white', backgroundColor:'goldenrod'}} type="submit" value='Sign In' />
+                        <input className="submit-btn btn btn-spcl" style={{color:'white', backgroundColor:'cadetblue'}} type="submit" value='Sign In' />
                         <br /><br /><h6>New here? <Link to='/register' >Register</Link> or Login with:</h6>
 
                     </Form.Group>

@@ -1,19 +1,19 @@
 import { createUserWithEmailAndPassword, getAuth } from '@firebase/auth';
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Register = () => {
     const [newUser, setNewUser] = useState([]);
-
+    const history = useHistory();
 
 
 
 
     const handleSubmit = (e) => {
         const auth = getAuth();
-    const email = newUser.email;
-    const password = newUser.password;
+        const email = newUser.email;
+        const password = newUser.password;
 
     createUserWithEmailAndPassword(auth, email, password)
     .then((res) => {
@@ -22,7 +22,7 @@ const Register = () => {
         newUserInfo.success = true;
         setNewUser(newUserInfo);
         // alert('Welcome!! You Successfully Signed Up ');
-        // history.push('/login');
+        history.push('/home');
         //updateUserName(newUser.name);
         //console.log(res.newUser);
     })
@@ -71,7 +71,7 @@ const Register = () => {
     }
     return (
         <div className="d-grid justify-content-center mt-5 ">
-            <div className="login-form shadow p-3 mb-5 bg-body rounded " style={{width: '550px',padding:'20px'}}>
+            <div className="login-form shadow p-5 mb-5 bg-body rounded " style={{width: '550px',padding:'20px'}}>
                 <Form onSubmit={handleSubmit} >
                 <h5 className="">Register for a new Account</h5><br />
 
@@ -97,14 +97,14 @@ const Register = () => {
                         <small>Already Have an Account? <Link to={'/login/'}><span >Sign In</span></Link> </small><br />
                         <small>By creating an account you are agree to Amazon user <span className="signin-link"><a href="#">Privacy Policy</a></span> and <span className="signin-link"><a href="#">Terms and Conditions</a></span>.</small>
 
-                    </div><br /><br />
+                    </div><br />
 
 
 
                     <Form.Group className="justify-content-start d-flex" >
 
-                        <input className="submit-btn btn" style={{color:'white', backgroundColor:'goldenrod'}} type="submit" value='Sign Up' />or
-                        <br /><button className="btn btn-primary">Google SignIn</button>
+                        <input className="submit-btn btn" style={{color:'white', backgroundColor:'cadetblue'}} type="submit" value='Sign Up' />
+                
 
                     </Form.Group>
                 </Form>
