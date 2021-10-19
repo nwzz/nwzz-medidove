@@ -19,53 +19,54 @@ function App() {
 
     <div className="App ">
       <AuthProvider>
-      <Router>
-        <Header></Header>
-        <Switch>
+        <Router>
+          <Header></Header>
+          <Switch>
 
-          <Route path="/login/">
-            <Login></Login>
-          </Route>
-          
-          <Route path="/doctors/">
-            <Doctors></Doctors>
-          </Route>
-          
-          <PrivateRoute path="/blog/">
-            <Blog></Blog>
-          </PrivateRoute>
-          
-          <Route path="/about-us/">
-            <AboutUs></AboutUs>
-          </Route>
+            <Route path='/home/'>
+              <Home></Home>
+            </Route>
 
-          <Route path="/register/">
-            <Register></Register>
-          </Route>
+            <Route exact path='/'>
+              <Home></Home>
+            </Route>
 
-          <Route path="/booking/:bookId">
-            <ServiceDetails></ServiceDetails>
-          </Route>
+            <Route path="/login/">
+              <Login></Login>
+            </Route>
 
-          <PrivateRoute path='/online-consult/'>
-            <OnlineConsult></OnlineConsult>
-          </PrivateRoute>
-          
-          <Route path='/home/'>
-            <Home></Home>
-          </Route>
+            <Route path="/doctors/">
+              <Doctors></Doctors>
+            </Route>
 
-          <Route exact path='/'>
-            <Home></Home>
-          </Route>
+            <PrivateRoute path="/blog/">
+              <Blog></Blog>
+            </PrivateRoute>
 
-          <Route path='*'>
-            <NotFound></NotFound>
-          </Route>
+            <Route path="/about-us/">
+              <AboutUs></AboutUs>
+            </Route>
 
-        </Switch>
-        <Footer></Footer>
-      </Router>
+            <Route path="/register/">
+              <Register></Register>
+            </Route>
+
+            <Route path="/booking/:bookId">
+              <ServiceDetails></ServiceDetails>
+            </Route>
+
+            <PrivateRoute path='/online-consult/'>
+              <OnlineConsult></OnlineConsult>
+            </PrivateRoute>
+
+
+            <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
+
+          </Switch>
+          <Footer></Footer>
+        </Router>
       </AuthProvider>
 
     </div>

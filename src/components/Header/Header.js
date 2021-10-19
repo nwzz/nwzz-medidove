@@ -18,7 +18,7 @@ const Header = () => {
                         
                     </div>
                     <Nav className="justify-content-center d-flex gap-3 ">
-                        <Nav.Link as={Link}  to='/home/'>Home</Nav.Link>
+                        <Nav.Link  href='/'>Home</Nav.Link>
                         <Nav.Link as={HashLink} to="/home/#services">Services</Nav.Link>
                         <Nav.Link as={Link}  to='/online-consult/'>Online Consult</Nav.Link>
                         <Nav.Link as={Link} to='/doctors/'>Doctors</Nav.Link>
