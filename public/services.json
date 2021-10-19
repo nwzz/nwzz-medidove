@@ -3,42 +3,42 @@
         "id": 1,
         "name": "COMPLETE DIAGNOSTIC",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "All types of Diagnostics and Medical test and Report provide by our Experienced Doctors and Assistants  .",
         "img": "https://i.ibb.co/mtN69Cb/service-6.jpg"
     },
     {
         "id": 2,
         "name": "BLOOD CANCER",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "We Have a Complete Treatment and Diagnostics for Blood Cancer Chemo Therapy and Medicinal treatments are available at our center.",
         "img": "https://i.ibb.co/sm8nrmk/service-5.jpg"
     },
     {
         "id": 3,
-        "name": "NEUOROLOGY SERGARY",
+        "name": " NEUROLOGY SURGERY",
         "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "We Have number of experienced Neuro Surgoen and Specialist of Neurology working for years.",
         "img": "https://i.ibb.co/18Ppz2C/service-4.jpg"
     },
     {
         "id": 4,
         "name": "ALLERGIC ISSUE",
         "price": "180",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "World Class Allergic Treatment are Available here not matter from when You are suffering for.",
         "img": "https://i.ibb.co/nDWGprz/service-3.jpg"
     },
     {
         "id": 5,
         "name": "DENTAL CARE",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "description": "World Class Dentist are also Available at our place all kinds of dental equipments and treatments are highly available and reasonable for patients .",
         "img": "https://i.ibb.co/rmWjN8h/service-2.jpg"
     },
     {
         "id": 6,
         "name": "BODY SURGERY",
         "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "description": "We Have a Complete Treatment and Diagnostics for Blood Cancer Chemo Therapy and Medicinal treatments are available at our center.",
         "img": "https://i.ibb.co/z5Jyp8B/service-1.jpg"
     }
 ]

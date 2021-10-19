@@ -12,6 +12,7 @@ import Doctors from './components/Doctors/Doctors';
 import Blog from './components/Blog/Blog';
 import AboutUs from './components/AboutUs/AboutUs';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 
 function App() {
   return (
@@ -40,6 +41,10 @@ function App() {
 
           <Route path="/register/">
             <Register></Register>
+          </Route>
+
+          <Route path="/booking/:bookId">
+            <ServiceDetails></ServiceDetails>
           </Route>
 
           <PrivateRoute path='/online-consult/'>

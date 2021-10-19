@@ -22,7 +22,7 @@ const Register = () => {
         newUserInfo.success = true;
         setNewUser(newUserInfo);
         // alert('Welcome!! You Successfully Signed Up ');
-        history.push('/home');
+        history.push('/');
         //updateUserName(newUser.name);
         //console.log(res.newUser);
     })

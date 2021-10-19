@@ -58,6 +58,7 @@ const Login = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        alert(`Sorry, ${errorCode} Try again`);
         console.log(errorMessage);
         console.log(errorCode);
       });      
@@ -81,7 +82,7 @@ const Login = () => {
     return (
 
         <div className="d-grid justify-content-center mt-5 ">
-            <div className="login-form shadow p-3 mb-5 bg-body rounded " style={{width: '550px',padding:'20px'}}>
+            <div className="login-form shadow mt-3 pt-5 mb-5 bg-body rounded " style={{width: '550px', height:'450px',padding:'25px'}}>
                 <Form onSubmit={handleSubmit} >
                     <h5 className="">Sign In With Your Email and Password</h5><br />
                     <Form.Group controlId="formGroupEmail" onBlur={handleBlur}>
@@ -106,18 +107,18 @@ const Login = () => {
 
 
                     <br /> <br /> 
-                    <Form.Group className="justify-content-start d-flex gap-3" >
+                    <Form.Group className="justify-content-center d-flex gap-3" >
 
-                        <input className="submit-btn btn btn-spcl" style={{color:'white', backgroundColor:'cadetblue'}} type="submit" value='Sign In' />
-                        <br /><br /><h6>New here? <Link to='/register' >Register</Link> or Login with:</h6>
-
+                        <input className="submit-btn btn login-btn" style={{color:'white', backgroundColor:'cadetblue'}} type="submit" value='Sign In' />
+                        <br />
+                        <button onClick={handleGoogleSignIn} style={{backgroundColor:'tomato'}} className="btn btn-spcl"><FontAwesomeIcon icon={faGoogle} size='2x' /></button>
                     </Form.Group>
                 </Form><br />
                 <div className="d-flex justify-content-center gap-3 ">
                     
-                <button onClick={handleGoogleSignIn} className="btn login-btn"><FontAwesomeIcon icon={faGoogle} size='2x' /></button>
-                <button className="btn login-btn "><FontAwesomeIcon icon={faFacebookF} size='2x' /></button>
-                <button className="btn login-btn "><FontAwesomeIcon icon={faGithub} size='2x' /></button><br />
+                
+                {/* <button className="btn login-btn "><FontAwesomeIcon icon={faFacebookF} size='2x' /></button>
+                <button className="btn login-btn "><FontAwesomeIcon icon={faGithub} size='2x' /></button><br /> */}
                 </div>
             </div>
         </div>

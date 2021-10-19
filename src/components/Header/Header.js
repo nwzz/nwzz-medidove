@@ -14,28 +14,31 @@ const Header = () => {
             <Navbar bg="light" sticky="top" collapseOnSelect expand="lg" >
                 <Container className="d-flex">
                     <div className="justify-content-start ms-3">
-                    <Link style={{textDecoration: 'none'}} to="/home"><img src={logo} alt="" /></Link>
+                    <a style={{textDecoration: 'none'}} href="/"><img src={logo} alt="Home" /></a>
                         
                     </div>
-                    <Nav className="justify-content-around d-flex gap-3 ">
+                    <Nav className="justify-content-center d-flex gap-3 ">
                         <Nav.Link as={Link}  to='/home/'>Home</Nav.Link>
                         <Nav.Link as={HashLink} to="/home/#services">Services</Nav.Link>
                         <Nav.Link as={Link}  to='/online-consult/'>Online Consult</Nav.Link>
                         <Nav.Link as={Link} to='/doctors/'>Doctors</Nav.Link>
                         <Nav.Link as={Link} to='/blog/'>Blog</Nav.Link>
                         <Nav.Link as={Link} to='/about-us/'>About Us</Nav.Link>
-                        {
-                            !user.email && <Link to="/register"><button className="btn ">Register</button></Link>
-                        }
+                        
                     </Nav>
+                    <div className="d-flex justify-content-end gap-3">
                     {
-                    user.email ?
-                    <span><button onClick={logOut} className="btn btn-info">Logout</button><span 
-                    style={{ marginLeft:'10px'}}>{user.email}</span>
-                    </ span>
-                    :
-                    <Link to="/login"><button className="btn btn-danger">Login</button></Link>
-                }
+                            !user.email && <Link to="/register"><button style={{backgroundColor:'cadetblue', color:'white'}} className="btn">Register</button></Link>
+                    }
+
+                    {
+                            user.email ?
+                            <span><button onClick={logOut} className="btn btn-info">Logout</button><span 
+                            style={{ marginLeft:'10px'}}>{user.email}</span></ span>
+                            :
+                            <Link to="/login"><button className="btn btn-danger">Login</button></Link>
+                    }
+                    </div>
 
                     
                 </Container>
