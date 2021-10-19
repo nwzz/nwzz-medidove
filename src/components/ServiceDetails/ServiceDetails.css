@@ -1,0 +1,8 @@
+.service-decor{
+    border: 1px solid red;
+    padding: 40px;
+    width: fit-content;
+}
+.service-decor img{
+    width: 100%;
+}

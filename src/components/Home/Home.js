@@ -17,8 +17,8 @@ const Home = () => {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h5>First slide label</h5>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h5>Best Care & Best Doctors</h5>
+                            <p>We care about You the best Way</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item style={{height:'500px'}}>
@@ -28,8 +28,8 @@ const Home = () => {
                             alt="Second slide"
                         />
                         <Carousel.Caption>
-                            <h5>Second slide label</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h5>Best Care & Best Doctors</h5>
+                            <p>We Provide Care and Love more than Treatment</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item style={{height:'500px'}}>
@@ -39,8 +39,8 @@ const Home = () => {
                             alt="Third slide"
                         />
                         <Carousel.Caption>
-                            <h5>Third slide label</h5>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <h5>Feel Hospital as Home</h5>
+                            <p>We Provide Care and Love more than Treatment</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

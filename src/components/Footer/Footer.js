@@ -25,11 +25,11 @@ const Footer = () => {
                     
                 </div>
                 <div className="col-md-3 d-grid">
-                    <h4>Popular Courses </h4>
-                    <p>C programming</p>
-                    <p>Python Programming</p>
-                    <p>React Native For Android</p>
-                    <p>Machine Learning</p>
+                    <h4>Popular Department</h4>
+                    <p>Gyconology</p>
+                    <p>Neurology</p>
+                    <p>Dermatology</p>
+                    <p>Medicine</p>
                 </div>
                 <div className="col-md-3 d-grid">
                     <h4>Organization</h4>
@@ -39,9 +39,9 @@ const Footer = () => {
                 </div>
                 <div className="col-md-3 d-grid">
                     <h4>Others</h4>
-                    <p>Study</p>
-                    <p>Skills</p>
-                    <p>Communication</p>
+                    <p>Doctors</p>
+                    <p>Surgeon</p>
+                    <p>Physician</p>
                 </div>
             </div><br /><br />s
             
