@@ -1,5 +1,6 @@
 .service-decor{
-    border: 1px solid red;
+    border: 3px solid cadetblue;
+    border-radius: 20px;
     padding: 40px;
     width: fit-content;
 }
